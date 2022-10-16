@@ -1,5 +1,5 @@
 {
-  "name": "codenames",
+  "name": "dcrypt",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,6 +19,7 @@
     "react-dom": "18.2.0",
     "react-query": "^3.39.2",
     "sass": "^1.55.0",
+    "socket.io": "^4.5.3",
     "zod": "^3.19.1"
   },
   "devDependencies": {
