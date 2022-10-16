@@ -1,5 +1,6 @@
 import Link from "next/link";
-import style from "../../styles/components/navigation/Header.module.scss"
+import style from "../../styles/components/navigation/Header.module.scss";
+import logo from "../../styles/components/navigation/Logo.module.scss";
 
 type HeaderTypes = {
   title: string;
@@ -13,7 +14,14 @@ const Header = ({ title, isCentered }: HeaderTypes) => {
   return (
     <nav className={style.container} style={centered}>
       <Link href={"/"}>
-        <a><h1>{title}</h1></a>
+        <a>
+          <h1>{title}</h1>
+          {/* <div class="stack" style="--stacks: 3;">
+            <span style="--index: 0;">STACK</span>
+            <span style="--index: 1;">STACK</span>
+            <span style="--index: 2;">STACK</span>
+          </div> */}
+        </a>
       </Link>
       <ul>
         <li>
