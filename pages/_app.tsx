@@ -5,7 +5,7 @@ import Header from "../components/navigation/Header";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <main className="container">
-        <Header title="D'crypt" isCentered />
+        <Header title="Codenames" isCentered />
         <Component {...pageProps} />
       </main>
   );
