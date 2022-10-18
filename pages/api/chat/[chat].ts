@@ -1,13 +1,13 @@
 import { NextApiRequest } from "next";
-import { useRouter } from "next/router";
+import { useRouter, withRouter } from "next/router";
 
 const ChatHandler = (req: NextApiRequest, res: any) => {
-  const router = useRouter();
-  const { chat } = router.query;
+  // console.log('body: ' + req.body)
+  // console.log('query: ' + req.query.chat)
   if (req.method === "POST") {
     const message = req.body;
-
-    res.socket.server.io.to(chat as string).emit("message", message);
+    res.socket.server.io.to(req.query.chat).emit("message", message);
+    // res.socket.server.io.emit("message", message);
 
     res.status(201).json(message);
   }

@@ -15,9 +15,7 @@ const Room: NextPage = () => {
     const socket = io("http://localhost:3000", {
       path: "/api/socket",
     });
-    socket.on("connection", (socket: Socket) => {
-      socket.join(room as string);
-    });
+    
     socket.on("connect", () => {
       setConnected(true);
       console.log("connected");
@@ -47,7 +45,8 @@ const Room: NextPage = () => {
           <li key={`message_${index}`}>{message}</li>
         ))}
       </ul>
-      <input type={"text"} ref={inputRef} onBlur={sendMessage} />
+      <input type={"text"} ref={inputRef} />
+      <button onClick={sendMessage}>Send</button>
     </>
   );
 };

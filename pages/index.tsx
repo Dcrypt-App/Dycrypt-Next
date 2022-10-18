@@ -42,7 +42,8 @@ const Home: NextPage = () => {
           <li key={`message_${index}`}>{message}</li>
         ))}
       </ul>
-      <input type={'text'} ref={inputRef} onBlur={sendMessage} />
+      <input type={'text'} ref={inputRef} />
+      <button onClick={sendMessage}>Send</button>
     </>
   );
 };
