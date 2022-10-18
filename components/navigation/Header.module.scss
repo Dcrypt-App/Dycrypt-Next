@@ -1,0 +1,35 @@
+@use '../../styles/variables.scss';
+
+$gap: 20px;
+
+.container {
+  @include variables.pad;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  gap: $gap;
+  background-color: white;
+  align-items: center;
+  min-width: max-content;
+  box-shadow: 0 0 15px rgb(1, 1, 1, 0.3);
+
+  h1 {
+    margin: 0;
+    padding-right: 0px;
+  }
+  ul {
+    font-size: 1.1rem;
+    gap: $gap;
+    margin: 0;
+    list-style: none;
+    padding-left: 0;
+    display: flex;
+    li a {
+      padding: 7px;
+      border-radius: 5px;
+      &:hover {
+        background-color:rgb(1, 1, 1, 0.035);
+      }
+    }
+  }
+}
