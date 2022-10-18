@@ -1,0 +1,8 @@
+$max: 1300px;
+$padding: 2rem;
+
+@mixin pad {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: $padding calc((-50vw + 50% - $padding) * -1);
+}
